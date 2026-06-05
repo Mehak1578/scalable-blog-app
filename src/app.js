@@ -18,6 +18,10 @@ app.use("/api/auth", authRoutes);
 
 app.use("/api/blogs", blogRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Scalable Blog API Running");
+});
+
 app.use(errorMiddleware);
 
 module.exports = app;
